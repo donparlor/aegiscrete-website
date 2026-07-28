@@ -1,3 +1,4 @@
-# Preview configuration — replace at public launch.
 User-agent: *
-Disallow: /
+Allow: /
+
+Sitemap: https://aegiscrete.ca/sitemap.xml
