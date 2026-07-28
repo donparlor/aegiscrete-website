@@ -1,0 +1,38 @@
+{
+  "base_source": "aegiscrete-visual-mobile-fix",
+  "cache_version": "20260728-7",
+  "visuals": {
+    "integrated-point-of-responsibility": {
+      "source_filename": "ChatGPT Image 28 juill. 2026, 18 h 27 min 32 s.png",
+      "output_png": "assets/images/integrated-point-of-responsibility.png",
+      "output_webp_full": "assets/images/integrated-point-of-responsibility-1536.webp",
+      "output_webp_mobile": "assets/images/integrated-point-of-responsibility-960.webp",
+      "width": 1536,
+      "height": 1024
+    },
+    "two-level-decision-architecture": {
+      "source_filename": "ChatGPT Image 28 juill. 2026, 18 h 49 min 47 s.png",
+      "output_png": "assets/images/two-level-decision-architecture.png",
+      "output_webp_full": "assets/images/two-level-decision-architecture-1536.webp",
+      "output_webp_mobile": "assets/images/two-level-decision-architecture-960.webp",
+      "width": 1536,
+      "height": 1024
+    },
+    "technology-maturity-governance": {
+      "source_filename": "ChatGPT Image 28 juill. 2026, 18 h 57 min 32 s.png",
+      "output_png": "assets/images/technology-maturity-governance.png",
+      "output_webp_full": "assets/images/technology-maturity-governance-1672.webp",
+      "output_webp_mobile": "assets/images/technology-maturity-governance-960.webp",
+      "width": 1672,
+      "height": 941
+    },
+    "phased-delivery-roadmap": {
+      "source_filename": "ChatGPT Image 28 juill. 2026, 18 h 44 min 07 s.png",
+      "output_png": "assets/images/phased-delivery-roadmap.png",
+      "output_webp_full": "assets/images/phased-delivery-roadmap-1672.webp",
+      "output_webp_mobile": "assets/images/phased-delivery-roadmap-960.webp",
+      "width": 1672,
+      "height": 941
+    }
+  }
+}
