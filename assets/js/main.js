@@ -1,27 +1,13 @@
 (() => {
   "use strict";
 
-  const config = window.AEGISCRETE_SITE || {};
   const header = document.querySelector("[data-header]");
   const nav = document.querySelector("[data-nav]");
   const navToggle = document.querySelector("[data-nav-toggle]");
-  const toolLink = document.querySelector("[data-tool-link]");
-  const toolPrivate = document.querySelector("[data-tool-private]");
 
   document.querySelectorAll("[data-year]").forEach((node) => {
     node.textContent = String(new Date().getFullYear());
   });
-
-  if (
-    toolLink &&
-    config.publishToolLink === true &&
-    typeof config.toolUrl === "string" &&
-    config.toolUrl.startsWith("https://")
-  ) {
-    toolLink.href = config.toolUrl;
-    toolLink.hidden = false;
-    if (toolPrivate) toolPrivate.hidden = true;
-  }
 
   const setHeaderState = () => {
     header?.classList.toggle("is-scrolled", window.scrollY > 18);
