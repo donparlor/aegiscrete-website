@@ -78,24 +78,37 @@ button { color: inherit; }
 .brand {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  align-self: stretch;
   flex: 0 0 auto;
-  padding: 7px 12px;
-  border: 1px solid rgba(255,255,255,.12);
-  border-radius: 4px;
-  background: rgba(255,255,255,.96);
-  box-shadow: 0 8px 24px rgba(0,0,0,.18);
+  height: 100%;
+  padding: 10px 22px;
+  border: 0;
+  border-radius: 0;
+  background: rgba(255,255,255,.97);
+  box-shadow: 0 8px 24px rgba(0,0,0,.14);
+  overflow: hidden;
 }
 .brand__logo {
   display: block;
-  width: clamp(190px, 17vw, 250px);
-  height: auto;
+  width: auto;
+  height: min(52px, calc(100% - 14px));
+  max-width: 245px;
   object-fit: contain;
 }
+.site-header.is-scrolled .brand__logo {
+  height: min(44px, calc(100% - 12px));
+}
 .brand--footer {
-  padding: 9px 14px;
+  align-self: auto;
+  height: auto;
+  padding: 12px 16px;
+  border-radius: 4px;
 }
 .brand--footer .brand__logo {
-  width: clamp(205px, 18vw, 270px);
+  width: auto;
+  height: 52px;
+  max-width: 260px;
 }
 .primary-nav { display: flex; align-items: center; gap: 30px; }
 .primary-nav > a:not(.button) { position: relative; color: rgba(255,255,255,.75); font-size: 13px; font-weight: 650; letter-spacing: .01em; }
