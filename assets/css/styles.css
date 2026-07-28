@@ -648,3 +648,270 @@ button { color: inherit; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
   .reveal { opacity: 1; transform: none; }
 }
+/* ================================================================
+   CONTACT + DECISION TOOL REFINEMENT — 2026-07-28
+   These final rules intentionally override earlier contact styles.
+   ================================================================ */
+
+.decision-tool__button {
+  margin-top: 28px;
+}
+
+.contact__shell {
+  grid-template-columns: minmax(0, 1.25fr) minmax(320px, .68fr);
+  gap: clamp(42px, 6vw, 88px);
+  align-items: stretch;
+}
+
+.contact__content {
+  min-width: 0;
+}
+
+.contact__brief {
+  margin-top: 38px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.contact__brief-card {
+  position: relative;
+  min-height: 168px;
+  padding: 22px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.13);
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.07), rgba(255,255,255,.025));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.035);
+  backdrop-filter: blur(9px);
+}
+
+.contact__brief-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 48px;
+  height: 2px;
+  background: var(--cyan-300);
+}
+
+.contact__brief-number {
+  color: var(--cyan-300);
+  font-size: 11px;
+  font-weight: 780;
+  letter-spacing: .12em;
+  font-variant-numeric: tabular-nums;
+}
+
+.contact__brief-card h3 {
+  margin: 0;
+  color: var(--white);
+  font-size: 16px;
+  line-height: 1.22;
+  letter-spacing: -.015em;
+}
+
+.contact__brief-card p {
+  margin: 8px 0 0;
+  color: var(--steel-300);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.contact__panel {
+  position: relative;
+  padding: clamp(28px, 3.2vw, 42px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid rgba(113,220,240,.26);
+  background:
+    linear-gradient(150deg, rgba(9,25,43,.95), rgba(7,17,31,.88));
+  box-shadow:
+    0 24px 65px rgba(0,0,0,.24),
+    inset 0 1px 0 rgba(255,255,255,.045);
+}
+
+.contact__panel::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--cyan-300), rgba(113,220,240,0));
+}
+
+.contact__panel::after {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  right: -95px;
+  bottom: -100px;
+  border: 1px solid rgba(113,220,240,.15);
+  border-radius: 50%;
+  box-shadow: 0 0 0 42px rgba(36,197,230,.018);
+  pointer-events: none;
+}
+
+.contact__panel-heading {
+  position: relative;
+  z-index: 1;
+}
+
+.contact__panel-kicker {
+  display: block;
+  color: var(--cyan-300);
+  font-size: 10px;
+  font-weight: 780;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.contact__panel h3 {
+  max-width: 390px;
+  margin: 13px 0 0;
+  color: var(--white);
+  font-size: clamp(25px, 2.5vw, 36px);
+  line-height: 1.06;
+  letter-spacing: -.035em;
+}
+
+.contact__panel-email {
+  position: relative;
+  z-index: 1;
+  margin-top: 34px;
+  color: var(--white);
+  font-size: clamp(21px, 2.15vw, 31px);
+  font-weight: 720;
+  line-height: 1.1;
+  letter-spacing: -.035em;
+  overflow-wrap: anywhere;
+}
+
+.contact__panel-email:hover,
+.contact__panel-email:focus-visible {
+  color: var(--cyan-300);
+}
+
+.contact__panel-copy {
+  position: relative;
+  z-index: 1;
+  max-width: 430px;
+  margin: 18px 0 0;
+  color: var(--steel-300);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.contact__panel-button {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  margin-top: 30px;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.contact__panel-meta {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  margin-top: 24px;
+  padding-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  border-top: 1px solid rgba(255,255,255,.1);
+}
+
+.contact__panel-meta span {
+  position: relative;
+  color: var(--steel-500);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+}
+
+.contact__panel-meta span + span::before {
+  content: "";
+  position: absolute;
+  left: -11px;
+  top: 50%;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--cyan-300);
+  transform: translateY(-50%);
+}
+
+/* Legacy elements are no longer rendered, but keeping them hidden prevents
+   accidental display if an older cached HTML document is momentarily used. */
+.contact__intake,
+.contact__action,
+.contact__email-card,
+.decision-tool__private {
+  display: none !important;
+}
+
+@media (max-width: 1050px) {
+  .contact__shell {
+    grid-template-columns: 1fr;
+  }
+
+  .contact__panel {
+    min-height: 390px;
+  }
+}
+
+@media (max-width: 760px) {
+  .contact__brief {
+    grid-template-columns: 1fr;
+  }
+
+  .contact__brief-card {
+    min-height: 0;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 38px 1fr;
+    gap: 12px;
+  }
+
+  .contact__brief-card::before {
+    width: 2px;
+    height: 100%;
+  }
+
+  .contact__panel {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact__shell {
+    padding: 36px 22px;
+  }
+
+  .contact__brief {
+    margin-top: 30px;
+  }
+
+  .contact__panel {
+    padding: 27px 22px;
+  }
+
+  .contact__panel h3 {
+    font-size: 28px;
+  }
+
+  .contact__panel-button {
+    padding-inline: 20px;
+  }
+}
