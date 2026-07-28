@@ -1262,3 +1262,122 @@ button { color: inherit; }
     margin-top: 6px;
   }
 }
+
+/* ================================================================
+   TABLET LAYOUT FIX — GALAXY FOLD / MEDIUM VIEWPORTS — 2026-07-28
+   Fixes support visuals trapped in implicit/narrow grid columns and
+   prevents the contact intake cards from becoming unreadably narrow.
+   ================================================================ */
+
+/* Grid items are allowed to shrink inside responsive containers. */
+.statement__content,
+.statement__aside,
+.company__content,
+.company__pillars,
+.support-visual,
+.support-visual__frame,
+.support-visual picture,
+.support-visual img,
+.contact__content,
+.contact__panel,
+.contact__brief,
+.contact__brief-card {
+  min-width: 0;
+}
+
+/* The statement/company grids collapse from three columns to two at 1100px.
+   Keep their support visual in the full main-content column instead of
+   generating an implicit third column. */
+@media (max-width: 1100px) and (min-width: 861px) {
+  .statement__layout > .support-visual,
+  .company__layout > .support-visual {
+    grid-column: 2 / -1;
+    width: 100%;
+  }
+}
+
+/* Use one clean content column on tablet and smaller Fold layouts. */
+@media (max-width: 860px) {
+  .statement__layout,
+  .company__layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
+  }
+
+  .statement__layout .section-number,
+  .company__layout .section-number {
+    display: none;
+  }
+
+  .statement__content,
+  .statement__aside,
+  .company__content,
+  .company__pillars,
+  .statement__layout > .support-visual,
+  .company__layout > .support-visual {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+
+  .statement__aside,
+  .company__pillars {
+    padding-top: 0;
+  }
+
+  .support-visual__frame,
+  .support-visual picture,
+  .support-visual img {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* At medium widths, place the contact panel below the introduction so the
+   three project-input cards have the full container width. */
+@media (max-width: 1180px) {
+  .contact__shell {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 36px;
+  }
+
+  .contact__panel {
+    min-height: 0;
+  }
+}
+
+/* On narrower tablets, stack the three inputs as readable horizontal cards. */
+@media (max-width: 900px) {
+  .contact__brief {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .contact__brief-card {
+    min-height: 0;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 42px minmax(0, 1fr);
+    align-items: start;
+    gap: 14px;
+  }
+
+  .contact__brief-card::before {
+    width: 2px;
+    height: 100%;
+  }
+
+  .contact__brief-card h3 {
+    font-size: 18px;
+  }
+
+  .contact__brief-card p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact__brief-card {
+    grid-template-columns: 36px minmax(0, 1fr);
+    gap: 12px;
+  }
+}
+
