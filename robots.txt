@@ -1,0 +1,3 @@
+# Preview configuration — replace at public launch.
+User-agent: *
+Disallow: /

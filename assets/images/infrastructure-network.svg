@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 720" role="img" aria-labelledby="title desc">
+  <title id="title">Connected infrastructure network</title>
+  <desc id="desc">Abstract tunnel, station and viaduct forms linked to data nodes</desc>
+  <defs>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#123b59" stop-opacity=".72"/>
+      <stop offset="1" stop-color="#07111f" stop-opacity=".88"/>
+    </linearGradient>
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#71dcf0"/>
+      <stop offset="1" stop-color="#008fb3"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <circle cx="360" cy="360" r="309" fill="none" stroke="#fff" stroke-opacity=".05"/>
+  <circle cx="360" cy="360" r="250" fill="none" stroke="#24c5e6" stroke-opacity=".12" stroke-dasharray="4 13"/>
+  <circle cx="360" cy="360" r="188" fill="none" stroke="#fff" stroke-opacity=".07"/>
+
+  <path d="M170 210 365 94l190 112v226L358 548 170 434Z" fill="url(#panel)" stroke="#fff" stroke-opacity=".14" stroke-width="2"/>
+  <path d="M170 210 358 319 555 206M358 319v229" fill="none" stroke="#fff" stroke-opacity=".13" stroke-width="2"/>
+
+  <!-- tunnel -->
+  <g transform="translate(205 230)">
+    <path d="M0 104C0 46 42 0 94 0s94 46 94 104v43H0Z" fill="#081525" stroke="#71dcf0" stroke-opacity=".52" stroke-width="3"/>
+    <path d="M29 104c0-40 29-73 65-73s65 33 65 73v43H29Z" fill="none" stroke="#fff" stroke-opacity=".26" stroke-width="2"/>
+    <path d="m48 133 46-16 46 16M42 146h104" fill="none" stroke="#24c5e6" stroke-opacity=".7" stroke-width="3"/>
+  </g>
+
+  <!-- station -->
+  <g transform="translate(370 220)">
+    <path d="m0 55 86-49 82 48v99H0Z" fill="#0d263c" stroke="#fff" stroke-opacity=".25" stroke-width="2"/>
+    <path d="M23 145V72l63-35 59 34v74" fill="none" stroke="#71dcf0" stroke-opacity=".55" stroke-width="3"/>
+    <path d="M38 93h93M38 114h93" stroke="#fff" stroke-opacity=".17" stroke-width="2"/>
+  </g>
+
+  <!-- viaduct -->
+  <g transform="translate(240 407)">
+    <path d="M0 30 237 0l5 26L5 56Z" fill="#18364d" stroke="#fff" stroke-opacity=".24" stroke-width="2"/>
+    <path d="M51 47v89M183 30v90" stroke="#71dcf0" stroke-opacity=".46" stroke-width="15"/>
+    <path d="M30 136h50M160 120h49" stroke="#fff" stroke-opacity=".17" stroke-width="4"/>
+  </g>
+
+  <!-- data nodes -->
+  <g fill="#24c5e6" filter="url(#glow)">
+    <circle cx="172" cy="210" r="5"/><circle cx="555" cy="206" r="5"/><circle cx="358" cy="548" r="5"/>
+    <circle cx="358" cy="319" r="7"/>
+  </g>
+  <g fill="none" stroke="#24c5e6" stroke-opacity=".56">
+    <circle cx="172" cy="210" r="14"/><circle cx="555" cy="206" r="14"/><circle cx="358" cy="548" r="14"/><circle cx="358" cy="319" r="19"/>
+  </g>
+  <path d="M172 210 358 319 555 206M358 319v229" fill="none" stroke="url(#cyan)" stroke-opacity=".45" stroke-width="2" stroke-dasharray="5 8"/>
+
+  <!-- outer labels -->
+  <g font-family="Inter,Arial,sans-serif" font-size="11" font-weight="700" letter-spacing="2" fill="#b5c2cc">
+    <text x="78" y="194">ASSET</text><text x="583" y="194">DATA</text><text x="320" y="620">LIFECYCLE</text>
+  </g>
+  <g fill="none" stroke="#fff" stroke-opacity=".16">
+    <path d="M120 190h45M556 190h46M360 565v42"/>
+  </g>
+</svg>

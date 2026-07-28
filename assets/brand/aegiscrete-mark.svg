@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 112" role="img" aria-labelledby="title desc">
+  <title id="title">AegisCrete mark</title>
+  <desc id="desc">Geometric shield with a stylized infrastructure form</desc>
+  <defs>
+    <linearGradient id="shield" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#24c5e6"/>
+      <stop offset="1" stop-color="#176fc3"/>
+    </linearGradient>
+  </defs>
+  <path d="M48 4 88 19v34c0 27-15.6 45.4-40 55C23.6 98.4 8 80 8 53V19L48 4Z" fill="none" stroke="url(#shield)" stroke-width="6"/>
+  <path d="M27 69V46l21-18 21 18v23" fill="none" stroke="#e9f8fb" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M36 69V50h24v19M27 69h42" fill="none" stroke="#24c5e6" stroke-width="6" stroke-linejoin="round"/>
+</svg>
