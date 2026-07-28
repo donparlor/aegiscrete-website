@@ -1,11 +1,9 @@
 /**
  * Public site configuration.
- * Keep preview=true until the public email, indexing and DNS are approved.
- * Keep publishToolLink=false until public disclosure of the demonstration is approved.
+ * The Metro Asset Diagnostic Decision Tool link remains controlled until disclosure is approved.
  */
 window.AEGISCRETE_SITE = Object.freeze({
-  preview: true,
-  contactEmail: "",
+  contactEmail: "info@aegiscrete.ca",
   publishToolLink: false,
   toolUrl: "https://demo.aegiscrete.ca"
 });
