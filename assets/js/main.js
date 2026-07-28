@@ -13,28 +13,48 @@
     header?.classList.toggle("is-scrolled", window.scrollY > 18);
   };
 
-  setHeaderState();
-  window.addEventListener("scroll", setHeaderState, { passive: true });
-
   const closeNav = () => {
     nav?.classList.remove("is-open");
     navToggle?.setAttribute("aria-expanded", "false");
     document.body.classList.remove("nav-open");
   };
 
+  const openNav = () => {
+    nav?.classList.add("is-open");
+    navToggle?.setAttribute("aria-expanded", "true");
+    document.body.classList.add("nav-open");
+  };
+
+  setHeaderState();
+  window.addEventListener("scroll", setHeaderState, { passive: true });
+
   navToggle?.addEventListener("click", () => {
     const isOpen = navToggle.getAttribute("aria-expanded") === "true";
-    navToggle.setAttribute("aria-expanded", String(!isOpen));
-    nav?.classList.toggle("is-open", !isOpen);
-    document.body.classList.toggle("nav-open", !isOpen);
+    if (isOpen) {
+      closeNav();
+    } else {
+      openNav();
+    }
   });
 
   nav?.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", closeNav);
   });
 
+  document.addEventListener("click", (event) => {
+    const isOpen = navToggle?.getAttribute("aria-expanded") === "true";
+    if (!isOpen) return;
+    const target = event.target;
+    if (nav?.contains(target) || navToggle?.contains(target)) return;
+    closeNav();
+  });
+
   window.addEventListener("keydown", (event) => {
     if (event.key === "Escape") closeNav();
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 860) closeNav();
   });
 
   const revealNodes = document.querySelectorAll(".reveal");
