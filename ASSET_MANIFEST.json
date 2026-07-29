@@ -1,38 +1,457 @@
-{
-  "base_source": "aegiscrete-visual-mobile-fix",
-  "cache_version": "20260728-7",
-  "visuals": {
-    "integrated-point-of-responsibility": {
-      "source_filename": "ChatGPT Image 28 juill. 2026, 18 h 27 min 32 s.png",
-      "output_png": "assets/images/integrated-point-of-responsibility.png",
-      "output_webp_full": "assets/images/integrated-point-of-responsibility-1536.webp",
-      "output_webp_mobile": "assets/images/integrated-point-of-responsibility-960.webp",
-      "width": 1536,
-      "height": 1024
-    },
-    "two-level-decision-architecture": {
-      "source_filename": "ChatGPT Image 28 juill. 2026, 18 h 49 min 47 s.png",
-      "output_png": "assets/images/two-level-decision-architecture.png",
-      "output_webp_full": "assets/images/two-level-decision-architecture-1536.webp",
-      "output_webp_mobile": "assets/images/two-level-decision-architecture-960.webp",
-      "width": 1536,
-      "height": 1024
-    },
-    "technology-maturity-governance": {
-      "source_filename": "ChatGPT Image 28 juill. 2026, 18 h 57 min 32 s.png",
-      "output_png": "assets/images/technology-maturity-governance.png",
-      "output_webp_full": "assets/images/technology-maturity-governance-1672.webp",
-      "output_webp_mobile": "assets/images/technology-maturity-governance-960.webp",
-      "width": 1672,
-      "height": 941
-    },
-    "phased-delivery-roadmap": {
-      "source_filename": "ChatGPT Image 28 juill. 2026, 18 h 44 min 07 s.png",
-      "output_png": "assets/images/phased-delivery-roadmap.png",
-      "output_webp_full": "assets/images/phased-delivery-roadmap-1672.webp",
-      "output_webp_mobile": "assets/images/phased-delivery-roadmap-960.webp",
-      "width": 1672,
-      "height": 941
-    }
+[
+  {
+    "key": "CCL-01",
+    "name": "ccl-asset-material-stewardship-intelligence",
+    "source_dimensions": [
+      1672,
+      941
+    ],
+    "png": "ccl-asset-material-stewardship-intelligence.png",
+    "webp": [
+      {
+        "width": 640,
+        "file": "ccl-asset-material-stewardship-intelligence-640.webp",
+        "pixels": [
+          640,
+          360
+        ]
+      },
+      {
+        "width": 960,
+        "file": "ccl-asset-material-stewardship-intelligence-960.webp",
+        "pixels": [
+          960,
+          540
+        ]
+      },
+      {
+        "width": 1536,
+        "file": "ccl-asset-material-stewardship-intelligence-1536.webp",
+        "pixels": [
+          1536,
+          864
+        ]
+      }
+    ]
+  },
+  {
+    "key": "CCL-02",
+    "name": "ccl-automated-routine-inspection-architecture",
+    "source_dimensions": [
+      1536,
+      1024
+    ],
+    "png": "ccl-automated-routine-inspection-architecture.png",
+    "webp": [
+      {
+        "width": 640,
+        "file": "ccl-automated-routine-inspection-architecture-640.webp",
+        "pixels": [
+          640,
+          427
+        ]
+      },
+      {
+        "width": 960,
+        "file": "ccl-automated-routine-inspection-architecture-960.webp",
+        "pixels": [
+          960,
+          640
+        ]
+      },
+      {
+        "width": 1536,
+        "file": "ccl-automated-routine-inspection-architecture-1536.webp",
+        "pixels": [
+          1536,
+          1024
+        ]
+      }
+    ]
+  },
+  {
+    "key": "CCL-03",
+    "name": "ccl-rehabilitation-protection-controlled-delivery",
+    "source_dimensions": [
+      1672,
+      941
+    ],
+    "png": "ccl-rehabilitation-protection-controlled-delivery.png",
+    "webp": [
+      {
+        "width": 640,
+        "file": "ccl-rehabilitation-protection-controlled-delivery-640.webp",
+        "pixels": [
+          640,
+          360
+        ]
+      },
+      {
+        "width": 960,
+        "file": "ccl-rehabilitation-protection-controlled-delivery-960.webp",
+        "pixels": [
+          960,
+          540
+        ]
+      },
+      {
+        "width": 1536,
+        "file": "ccl-rehabilitation-protection-controlled-delivery-1536.webp",
+        "pixels": [
+          1536,
+          864
+        ]
+      }
+    ]
+  },
+  {
+    "key": "P01",
+    "name": "pathway-tunnel-lining-joints-water-ingress",
+    "source_dimensions": [
+      1672,
+      941
+    ],
+    "png": "pathway-tunnel-lining-joints-water-ingress.png",
+    "webp": [
+      {
+        "width": 640,
+        "file": "pathway-tunnel-lining-joints-water-ingress-640.webp",
+        "pixels": [
+          640,
+          360
+        ]
+      },
+      {
+        "width": 960,
+        "file": "pathway-tunnel-lining-joints-water-ingress-960.webp",
+        "pixels": [
+          960,
+          540
+        ]
+      },
+      {
+        "width": 1536,
+        "file": "pathway-tunnel-lining-joints-water-ingress-1536.webp",
+        "pixels": [
+          1536,
+          864
+        ]
+      }
+    ]
+  },
+  {
+    "key": "P02",
+    "name": "pathway-track-bed-plinth-trackside-elements",
+    "source_dimensions": [
+      1536,
+      1024
+    ],
+    "png": "pathway-track-bed-plinth-trackside-elements.png",
+    "webp": [
+      {
+        "width": 640,
+        "file": "pathway-track-bed-plinth-trackside-elements-640.webp",
+        "pixels": [
+          640,
+          427
+        ]
+      },
+      {
+        "width": 960,
+        "file": "pathway-track-bed-plinth-trackside-elements-960.webp",
+        "pixels": [
+          960,
+          640
+        ]
+      },
+      {
+        "width": 1536,
+        "file": "pathway-track-bed-plinth-trackside-elements-1536.webp",
+        "pixels": [
+          1536,
+          1024
+        ]
+      }
+    ]
+  },
+  {
+    "key": "P03",
+    "name": "pathway-viaduct-bearing-support-zones",
+    "source_dimensions": [
+      1536,
+      1024
+    ],
+    "png": "pathway-viaduct-bearing-support-zones.png",
+    "webp": [
+      {
+        "width": 640,
+        "file": "pathway-viaduct-bearing-support-zones-640.webp",
+        "pixels": [
+          640,
+          427
+        ]
+      },
+      {
+        "width": 960,
+        "file": "pathway-viaduct-bearing-support-zones-960.webp",
+        "pixels": [
+          960,
+          640
+        ]
+      },
+      {
+        "width": 1536,
+        "file": "pathway-viaduct-bearing-support-zones-1536.webp",
+        "pixels": [
+          1536,
+          1024
+        ]
+      }
+    ]
+  },
+  {
+    "key": "P04",
+    "name": "pathway-box-girders-viaduct-superstructure",
+    "source_dimensions": [
+      1536,
+      1024
+    ],
+    "png": "pathway-box-girders-viaduct-superstructure.png",
+    "webp": [
+      {
+        "width": 640,
+        "file": "pathway-box-girders-viaduct-superstructure-640.webp",
+        "pixels": [
+          640,
+          427
+        ]
+      },
+      {
+        "width": 960,
+        "file": "pathway-box-girders-viaduct-superstructure-960.webp",
+        "pixels": [
+          960,
+          640
+        ]
+      },
+      {
+        "width": 1536,
+        "file": "pathway-box-girders-viaduct-superstructure-1536.webp",
+        "pixels": [
+          1536,
+          1024
+        ]
+      }
+    ]
+  },
+  {
+    "key": "P05",
+    "name": "pathway-structural-steel-anchors-station-canopies",
+    "source_dimensions": [
+      1536,
+      1024
+    ],
+    "png": "pathway-structural-steel-anchors-station-canopies.png",
+    "webp": [
+      {
+        "width": 640,
+        "file": "pathway-structural-steel-anchors-station-canopies-640.webp",
+        "pixels": [
+          640,
+          427
+        ]
+      },
+      {
+        "width": 960,
+        "file": "pathway-structural-steel-anchors-station-canopies-960.webp",
+        "pixels": [
+          960,
+          640
+        ]
+      },
+      {
+        "width": 1536,
+        "file": "pathway-structural-steel-anchors-station-canopies-1536.webp",
+        "pixels": [
+          1536,
+          1024
+        ]
+      }
+    ]
+  },
+  {
+    "key": "P06",
+    "name": "pathway-stations-depots-high-level-interiors",
+    "source_dimensions": [
+      1536,
+      1024
+    ],
+    "png": "pathway-stations-depots-high-level-interiors.png",
+    "webp": [
+      {
+        "width": 640,
+        "file": "pathway-stations-depots-high-level-interiors-640.webp",
+        "pixels": [
+          640,
+          427
+        ]
+      },
+      {
+        "width": 960,
+        "file": "pathway-stations-depots-high-level-interiors-960.webp",
+        "pixels": [
+          960,
+          640
+        ]
+      },
+      {
+        "width": 1536,
+        "file": "pathway-stations-depots-high-level-interiors-1536.webp",
+        "pixels": [
+          1536,
+          1024
+        ]
+      }
+    ]
+  },
+  {
+    "key": "P07",
+    "name": "pathway-foundations-soil-erosion-scour",
+    "source_dimensions": [
+      1536,
+      1024
+    ],
+    "png": "pathway-foundations-soil-erosion-scour.png",
+    "webp": [
+      {
+        "width": 640,
+        "file": "pathway-foundations-soil-erosion-scour-640.webp",
+        "pixels": [
+          640,
+          427
+        ]
+      },
+      {
+        "width": 960,
+        "file": "pathway-foundations-soil-erosion-scour-960.webp",
+        "pixels": [
+          960,
+          640
+        ]
+      },
+      {
+        "width": 1536,
+        "file": "pathway-foundations-soil-erosion-scour-1536.webp",
+        "pixels": [
+          1536,
+          1024
+        ]
+      }
+    ]
+  },
+  {
+    "key": "TOE-01",
+    "name": "technology-by-operating-environment",
+    "source_dimensions": [
+      1672,
+      941
+    ],
+    "png": "technology-by-operating-environment.png",
+    "webp": [
+      {
+        "width": 640,
+        "file": "technology-by-operating-environment-640.webp",
+        "pixels": [
+          640,
+          360
+        ]
+      },
+      {
+        "width": 960,
+        "file": "technology-by-operating-environment-960.webp",
+        "pixels": [
+          960,
+          540
+        ]
+      },
+      {
+        "width": 1536,
+        "file": "technology-by-operating-environment-1536.webp",
+        "pixels": [
+          1536,
+          864
+        ]
+      }
+    ]
+  },
+  {
+    "key": "RIO-01",
+    "name": "routine-inspection-operating-model",
+    "source_dimensions": [
+      1672,
+      941
+    ],
+    "png": "routine-inspection-operating-model.png",
+    "webp": [
+      {
+        "width": 640,
+        "file": "routine-inspection-operating-model-640.webp",
+        "pixels": [
+          640,
+          360
+        ]
+      },
+      {
+        "width": 960,
+        "file": "routine-inspection-operating-model-960.webp",
+        "pixels": [
+          960,
+          540
+        ]
+      },
+      {
+        "width": 1536,
+        "file": "routine-inspection-operating-model-1536.webp",
+        "pixels": [
+          1536,
+          864
+        ]
+      }
+    ]
+  },
+  {
+    "key": "ACM-01",
+    "name": "aegiscrete-integrated-coordination-model",
+    "source_dimensions": [
+      1672,
+      941
+    ],
+    "png": "aegiscrete-integrated-coordination-model.png",
+    "webp": [
+      {
+        "width": 640,
+        "file": "aegiscrete-integrated-coordination-model-640.webp",
+        "pixels": [
+          640,
+          360
+        ]
+      },
+      {
+        "width": 960,
+        "file": "aegiscrete-integrated-coordination-model-960.webp",
+        "pixels": [
+          960,
+          540
+        ]
+      },
+      {
+        "width": 1536,
+        "file": "aegiscrete-integrated-coordination-model-1536.webp",
+        "pixels": [
+          1536,
+          864
+        ]
+      }
+    ]
   }
-}
+]

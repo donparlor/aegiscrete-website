@@ -24,7 +24,7 @@
 <link href="assets/brand/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
 <link href="assets/brand/apple-touch-icon.png" rel="apple-touch-icon"/>
 <link href="site.webmanifest" rel="manifest"/>
-<link href="assets/css/styles.css?v=20260729-1" rel="stylesheet"/>
+<link href="assets/css/styles.css?v=20260729-2" rel="stylesheet"/>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -259,98 +259,96 @@
   }
 
 
-  /* July 29 2026 content refinement: card spacing + visual prompt placeholders */
+  /* July 29 2026 final visual integration */
   .capability-card { justify-content: flex-start; }
   .capability-card h3 { margin: 16px 0 14px; max-width: none; }
   .capability-card__kicker + h3 { margin-top: 10px; }
   .capability-card p { margin: 0; }
   .capability-card ul { margin-top: 18px; }
 
-  .visual-prompts {
-    margin-top: 34px;
-    padding: 24px;
-    border: 1px dashed rgba(7,17,31,.18);
-    background: rgba(7,17,31,.03);
-  }
-  .visual-prompts__intro p {
-    margin: 10px 0 0;
-    color: rgba(7,17,31,.68);
-    font-size: 14px;
-    line-height: 1.7;
-  }
-  .visual-prompts__intro h3 {
-    margin: 10px 0 0;
-    font-size: 24px;
-    line-height: 1.18;
-  }
-  .visual-prompts__intro .eyebrow,
-  .visual-prompts .eyebrow { margin-bottom: 0; }
-  .prompt-grid {
+  .support-card-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 18px;
-    margin-top: 22px;
+    margin-top: 34px;
   }
-  .prompt-grid--two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .prompt-grid--one { grid-template-columns: 1fr; }
-  .prompt-card {
-    padding: 18px;
+  .support-card {
+    overflow: hidden;
     border: 1px solid rgba(7,17,31,.12);
     background: #fff;
-    box-shadow: 0 10px 24px rgba(7,17,31,.04);
+    box-shadow: 0 14px 34px rgba(7,17,31,.055);
   }
-  .prompt-card__label {
-    display: inline-flex;
-    margin-bottom: 12px;
+  .support-card__media,
+  .pathway-card__visual {
+    display: block;
+    overflow: hidden;
+    background: #07111f;
+  }
+  .support-card__media { aspect-ratio: 16 / 9; }
+  .pathway-card__visual {
+    aspect-ratio: 3 / 2;
+    margin: 0 0 18px;
+    border: 1px solid rgba(7,17,31,.10);
+  }
+  .support-card__media picture,
+  .pathway-card__visual picture,
+  .support-card__media img,
+  .pathway-card__visual img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .support-card__media img,
+  .pathway-card__visual img { object-fit: contain; }
+  .support-card__body { padding: 20px; }
+  .support-card__label {
+    display: block;
+    margin-bottom: 8px;
     color: var(--cyan-500, #008fb3);
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 800;
     letter-spacing: .12em;
     text-transform: uppercase;
   }
-  .prompt-card h4 {
+  .support-card h3 {
     margin: 0;
-    font-size: 18px;
-    line-height: 1.25;
+    font-size: 19px;
+    line-height: 1.24;
   }
-  .prompt-card__note {
+  .support-card p {
     margin: 10px 0 0;
-    color: rgba(7,17,31,.65);
+    color: rgba(7,17,31,.68);
     font-size: 13px;
     line-height: 1.6;
   }
-  .prompt-card pre {
-    margin: 14px 0 0;
-    white-space: pre-wrap;
-    word-break: break-word;
-    font: 12px/1.62 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-    color: rgba(7,17,31,.82);
+  .pathway-card__visual img { transition: transform .35s ease; }
+  .pathway-card:hover .pathway-card__visual img { transform: scale(1.012); }
+  .conceptual-visual-note {
+    margin: 16px 0 0;
+    color: rgba(7,17,31,.62);
+    font-size: 12px;
+    line-height: 1.65;
   }
-  .section--ink .visual-prompts,
-  .company.section--ink .visual-prompts {
-    border-color: rgba(115,215,237,.22);
-    background: rgba(255,255,255,.045);
+  .support-visual--integrated {
+    margin-top: 34px;
   }
-  .section--ink .visual-prompts__intro p,
-  .company.section--ink .visual-prompts__intro p,
-  .section--ink .prompt-card__note,
-  .company.section--ink .prompt-card__note { color: rgba(255,255,255,.72); }
-  .section--ink .prompt-card,
-  .company.section--ink .prompt-card {
-    border-color: rgba(255,255,255,.12);
-    background: rgba(255,255,255,.04);
-    box-shadow: none;
+  .company__model-visual {
+    grid-column: 2 / -1;
+    margin-top: 34px;
   }
-  .section--ink .prompt-card pre,
-  .company.section--ink .prompt-card pre { color: rgba(255,255,255,.84); }
-  @media (max-width: 1100px) {
-    .prompt-grid,
-    .prompt-grid--two { grid-template-columns: 1fr; }
-  }
-  @media (max-width: 760px) {
-    .visual-prompts { padding: 20px; }
-  }
+  .section--ink .conceptual-visual-note,
+  .company.section--ink .conceptual-visual-note { color: rgba(255,255,255,.65); }
 
+  @media (max-width: 1100px) {
+    .support-card-grid { grid-template-columns: 1fr; }
+    .company__model-visual { grid-column: 1 / -1; }
+  }
+  @media (max-width: 980px) {
+    .pathway-card__visual { margin-bottom: 16px; }
+  }
+  @media (max-width: 620px) {
+    .support-card__body { padding: 17px; }
+  }
 </style></head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -513,7 +511,7 @@
 <p class="proposal-note"><strong>Controlled principle:</strong> a visible condition may define where to investigate, but it does not by itself establish the mechanism, the original source, the compatible repair chemistry or the correct long-term intervention.</p>
 <p class="representative-note"><strong>Scope principle:</strong> the asset groups, conditions and technology pathways shown on this site are representative rather than exhaustive. Additional variables and disciplines may emerge from construction records, material provenance, operational history, stewardship knowledge and field evidence.</p>
 <p class="representative-note"><strong>System-depth principle:</strong> many infrastructure conditions are volumetric and system-based rather than purely superficial. Where the decision requires it, surface observations should be complemented by subsurface, geometric, material, environmental and dynamic investigation.</p>
-<figure class="support-visual support-visual--light  reveal">
+<figure class="support-visual support-visual--light reveal">
 <a aria-label="Open the program scoping and material or solution eligibility remain separated by evidence gates and explicit stop rules visual at full size" class="support-visual__frame" href="assets/images/two-level-decision-architecture.png" rel="noopener" target="_blank">
 <picture>
 <source sizes="(max-width: 1100px) calc(100vw - 32px), min(1160px, calc(100vw - 120px))" srcset="assets/images/two-level-decision-architecture-960.webp 960w, assets/images/two-level-decision-architecture-1536.webp 1536w" type="image/webp"/>
@@ -567,35 +565,7 @@
 <p>Geolocated defect registers, repeat-image comparison, change detection, acceptance records, predictive-maintenance support, operating procedures, training, handover and maintenance integration.</p>
 </article>
 </div>
-
-<div class="visual-prompts reveal">
-<div class="visual-prompts__intro">
-<p class="eyebrow eyebrow--dark"><span></span> Suggested support visuals</p>
-<h3>Prompt placeholders for coordinated capability layers</h3>
-<p>Generate the visuals in a separate image-generation conversation, then replace these prompt cards with the final image cards or thumbnails.</p>
-</div>
-<div class="prompt-grid">
-<article class="prompt-card">
-<span class="prompt-card__label">CCL-01</span>
-<h4>Asset, material and stewardship intelligence</h4>
-<p class="prompt-card__note">Suggested small landscape support visual</p>
-<pre>Create a premium landscape engineering visual tile showing metro infrastructure asset, material and stewardship intelligence. Include layered as-built records, a tunnel or station structural fragment, material samples, waterproofing or drainage cues, repair-history references and a disciplined evidence dashboard. Style: high-end corporate engineering visualization, realistic-digital hybrid, clean and restrained, concrete grey, steel and dark navy tones with subtle cyan accents. No logos, no readable small text and no dramatic failure scene.</pre>
-</article>
-<article class="prompt-card">
-<span class="prompt-card__label">CCL-02</span>
-<h4>Automated routine inspection architecture</h4>
-<p class="prompt-card__note">Suggested small landscape support visual</p>
-<pre>Create a premium landscape visual tile showing automated routine inspection architecture for metro assets. Show a coordinated family of platforms such as a rail-compatible tunnel robot, an outdoor drone near a viaduct, a terrestrial LiDAR tripod and a telescopic or high-reach inspection unit, all connected through repeatable geolocated data capture. Style: realistic architectural-engineering visualization with dark navy and steel tones, subtle cyan overlays, clean lighting, no logos and no readable text.</pre>
-</article>
-<article class="prompt-card">
-<span class="prompt-card__label">CCL-03</span>
-<h4>Rehabilitation, protection and controlled delivery</h4>
-<p class="prompt-card__note">Suggested small landscape support visual</p>
-<pre>Create a premium landscape visual tile showing controlled rehabilitation, protection and delivery for metro infrastructure. Illustrate carefully planned repair execution, joint or drainage management, localized reinstatement, corrosion control, protective treatment, verification steps and lifecycle monitoring handover. Show controlled access, professional execution and measurable verification rather than an emergency scene. Use a refined corporate engineering style, concrete grey and dark navy with restrained cyan accents, no logos and no text.</pre>
-</article>
-</div>
-</div>
-
+<div class="support-card-grid reveal"><article class="support-card"><a aria-label="Open the Asset, material and stewardship intelligence conceptual visual at full size" class="support-card__media" href="assets/images/ccl-asset-material-stewardship-intelligence.png" rel="noopener" target="_blank"><picture><source sizes="(max-width: 1100px) calc(100vw - 40px), 32vw" srcset="assets/images/ccl-asset-material-stewardship-intelligence-640.webp 640w, assets/images/ccl-asset-material-stewardship-intelligence-960.webp 960w, assets/images/ccl-asset-material-stewardship-intelligence-1536.webp 1536w" type="image/webp"/><img alt="Conceptual metro infrastructure visual combining construction records, material samples, asset geometry, condition data and lifecycle stewardship intelligence." decoding="async" height="941" loading="lazy" src="assets/images/ccl-asset-material-stewardship-intelligence.png" width="1672"/></picture></a><div class="support-card__body"><span class="support-card__label">CCL-01</span><h3>Asset, material and stewardship intelligence</h3><p>Asset, material and stewardship intelligence connected through one controlled evidence base.</p></div></article><article class="support-card"><a aria-label="Open the Automated routine inspection architecture conceptual visual at full size" class="support-card__media" href="assets/images/ccl-automated-routine-inspection-architecture.png" rel="noopener" target="_blank"><picture><source sizes="(max-width: 1100px) calc(100vw - 40px), 32vw" srcset="assets/images/ccl-automated-routine-inspection-architecture-640.webp 640w, assets/images/ccl-automated-routine-inspection-architecture-960.webp 960w, assets/images/ccl-automated-routine-inspection-architecture-1536.webp 1536w" type="image/webp"/><img alt="Conceptual automated metro inspection architecture using rail-compatible mobile capture, outdoor drone inspection, terrestrial LiDAR, high-reach access and geolocated data outputs." decoding="async" height="1024" loading="lazy" src="assets/images/ccl-automated-routine-inspection-architecture.png" width="1536"/></picture></a><div class="support-card__body"><span class="support-card__label">CCL-02</span><h3>Automated routine inspection architecture</h3><p>Platform and payload combinations coordinated around repeatable, geolocated routine inspection.</p></div></article><article class="support-card"><a aria-label="Open the Rehabilitation, protection and controlled delivery conceptual visual at full size" class="support-card__media" href="assets/images/ccl-rehabilitation-protection-controlled-delivery.png" rel="noopener" target="_blank"><picture><source sizes="(max-width: 1100px) calc(100vw - 40px), 32vw" srcset="assets/images/ccl-rehabilitation-protection-controlled-delivery-640.webp 640w, assets/images/ccl-rehabilitation-protection-controlled-delivery-960.webp 960w, assets/images/ccl-rehabilitation-protection-controlled-delivery-1536.webp 1536w" type="image/webp"/><img alt="Conceptual controlled rehabilitation workflow showing material preparation, field execution, protective treatment, verification, handover and lifecycle monitoring." decoding="async" height="941" loading="lazy" src="assets/images/ccl-rehabilitation-protection-controlled-delivery.png" width="1672"/></picture></a><div class="support-card__body"><span class="support-card__label">CCL-03</span><h3>Rehabilitation, protection and controlled delivery</h3><p>Controlled delivery connects preparation, intervention, verification, handover and monitoring.</p></div></article></div><p class="conceptual-visual-note">Conceptual illustrations. Representative platforms, workflows and technology families remain subject to project-specific evidence, engineering review, safety requirements and owner acceptance.</p>
 </div>
 </section>
 <section aria-labelledby="assets-title" class="assets section" id="infrastructure">
@@ -653,7 +623,7 @@
 </div>
 <div class="pathway-grid">
 <article class="pathway-card pathway-card--featured reveal">
-<div class="pathway-card__head"><div><span class="pathway-card__index">P01</span><h3>Tunnel lining, joints and water ingress</h3></div></div>
+<div class="pathway-card__head"><div><span class="pathway-card__index">P01</span><h3>Tunnel lining, joints and water ingress</h3></div></div><a aria-label="Open the conceptual visual for P01 Tunnel lining, joints and water ingress at full size" class="pathway-card__visual" href="assets/images/pathway-tunnel-lining-joints-water-ingress.png" rel="noopener" target="_blank"><picture><source sizes="(max-width: 980px) calc(100vw - 40px), 48vw" srcset="assets/images/pathway-tunnel-lining-joints-water-ingress-640.webp 640w, assets/images/pathway-tunnel-lining-joints-water-ingress-960.webp 960w, assets/images/pathway-tunnel-lining-joints-water-ingress-1536.webp 1536w" type="image/webp"/><img alt="Conceptual tunnel lining and water-ingress pathway showing geolocated inspection, moisture comparison, close validation, functional treatment and drainage review." decoding="async" height="941" loading="lazy" src="assets/images/pathway-tunnel-lining-joints-water-ingress.png" width="1672"/></picture></a>
 <p>Representative conditions include visible seepage, dampness, deposits, joint distress, recurring leakage or change in a previously repaired area.</p>
 <div class="pathway-flow">
 <div><strong>Routine screening</strong><span>Geolocated RGB/360° capture, thermal or moisture comparison where suitable, laser geometry and repeat-cycle change detection.</span></div>
@@ -663,7 +633,7 @@
 </div>
 </article>
 <article class="pathway-card reveal">
-<div class="pathway-card__head"><div><span class="pathway-card__index">P02</span><h3>Track bed, plinth and trackside elements</h3></div></div>
+<div class="pathway-card__head"><div><span class="pathway-card__index">P02</span><h3>Track bed, plinth and trackside elements</h3></div></div><a aria-label="Open the conceptual visual for P02 Track bed, plinth and trackside elements at full size" class="pathway-card__visual" href="assets/images/pathway-track-bed-plinth-trackside-elements.png" rel="noopener" target="_blank"><picture><source sizes="(max-width: 980px) calc(100vw - 40px), 48vw" srcset="assets/images/pathway-track-bed-plinth-trackside-elements-640.webp 640w, assets/images/pathway-track-bed-plinth-trackside-elements-960.webp 960w, assets/images/pathway-track-bed-plinth-trackside-elements-1536.webp 1536w" type="image/webp"/><img alt="Conceptual track-bed, plinth and trackside pathway showing repeatable rail-compatible screening, targeted validation, localized repair and verification." decoding="async" height="1024" loading="lazy" src="assets/images/pathway-track-bed-plinth-trackside-elements.png" width="1536"/></picture></a>
 <p>Representative conditions include visible cracks, possible microfissuring, detached prior repairs, spalls, geometric change and loose, missing or displaced elements.</p>
 <div class="pathway-flow">
 <div><strong>Routine screening</strong><span>Rail-compatible repeatable imaging, LiDAR or profiling, route geolocation and automated comparison of track-bed, walkway, cladding, fixing and handrail conditions.</span></div>
@@ -673,7 +643,7 @@
 </div>
 </article>
 <article class="pathway-card reveal">
-<div class="pathway-card__head"><div><span class="pathway-card__index">P03</span><h3>Viaduct bearing pedestal and support zones</h3></div></div>
+<div class="pathway-card__head"><div><span class="pathway-card__index">P03</span><h3>Viaduct bearing pedestal and support zones</h3></div></div><a aria-label="Open the conceptual visual for P03 Viaduct bearing pedestal and support zones at full size" class="pathway-card__visual" href="assets/images/pathway-viaduct-bearing-support-zones.png" rel="noopener" target="_blank"><picture><source sizes="(max-width: 980px) calc(100vw - 40px), 48vw" srcset="assets/images/pathway-viaduct-bearing-support-zones-640.webp 640w, assets/images/pathway-viaduct-bearing-support-zones-960.webp 960w, assets/images/pathway-viaduct-bearing-support-zones-1536.webp 1536w" type="image/webp"/><img alt="Conceptual viaduct bearing pedestal and support-zone pathway showing remote capture, geometry review, close inspection, monitoring and support-system evaluation." decoding="async" height="1024" loading="lazy" src="assets/images/pathway-viaduct-bearing-support-zones.png" width="1536"/></picture></a>
 <p>Representative conditions include cracking, spalling, corrosion staining, bearing-zone distress, apparent displacement or deterioration at load-transfer interfaces.</p>
 <div class="pathway-flow">
 <div><strong>Routine screening</strong><span>Drone or terrestrial imaging, photogrammetry, LiDAR/survey comparison and targeted repeat views of bearings, pedestals, supports and adjacent concrete.</span></div>
@@ -683,7 +653,7 @@
 </div>
 </article>
 <article class="pathway-card reveal">
-<div class="pathway-card__head"><div><span class="pathway-card__index">P04</span><h3>Box girders and viaduct superstructure</h3></div></div>
+<div class="pathway-card__head"><div><span class="pathway-card__index">P04</span><h3>Box girders and viaduct superstructure</h3></div></div><a aria-label="Open the conceptual visual for P04 Box girders and viaduct superstructure at full size" class="pathway-card__visual" href="assets/images/pathway-box-girders-viaduct-superstructure.png" rel="noopener" target="_blank"><picture><source sizes="(max-width: 980px) calc(100vw - 40px), 48vw" srcset="assets/images/pathway-box-girders-viaduct-superstructure-640.webp 640w, assets/images/pathway-box-girders-viaduct-superstructure-960.webp 960w, assets/images/pathway-box-girders-viaduct-superstructure-1536.webp 1536w" type="image/webp"/><img alt="Conceptual box-girder and viaduct-superstructure pathway showing drone and terrestrial capture, geometric comparison, thermography, close inspection and controlled intervention." decoding="async" height="1024" loading="lazy" src="assets/images/pathway-box-girders-viaduct-superstructure.png" width="1536"/></picture></a>
 <p>Representative conditions include cracking, delamination indicators, drainage staining, localized concrete loss, internal-access concerns and steel or connection anomalies.</p>
 <div class="pathway-flow">
 <div><strong>Routine screening</strong><span>Outdoor drone imaging, photogrammetry, LiDAR, thermal screening where suitable and repeat geometric or condition comparison.</span></div>
@@ -693,7 +663,7 @@
 </div>
 </article>
 <article class="pathway-card reveal">
-<div class="pathway-card__head"><div><span class="pathway-card__index">P05</span><h3>Structural steel, anchors and station canopies</h3></div></div>
+<div class="pathway-card__head"><div><span class="pathway-card__index">P05</span><h3>Structural steel, anchors and station canopies</h3></div></div><a aria-label="Open the conceptual visual for P05 Structural steel, anchors and station canopies at full size" class="pathway-card__visual" href="assets/images/pathway-structural-steel-anchors-station-canopies.png" rel="noopener" target="_blank"><picture><source sizes="(max-width: 980px) calc(100vw - 40px), 48vw" srcset="assets/images/pathway-structural-steel-anchors-station-canopies-640.webp 640w, assets/images/pathway-structural-steel-anchors-station-canopies-960.webp 960w, assets/images/pathway-structural-steel-anchors-station-canopies-1536.webp 1536w" type="image/webp"/><img alt="Conceptual structural-steel, anchor and station-canopy pathway showing remote screening, geometry and thermal review, connection inspection, protection and verification." decoding="async" height="1024" loading="lazy" src="assets/images/pathway-structural-steel-anchors-station-canopies.png" width="1536"/></picture></a>
 <p>Representative conditions include coating failure, corrosion, loose or missing fasteners, weld indications, section loss, deformation and fatigue-sensitive details.</p>
 <div class="pathway-flow">
 <div><strong>Routine screening</strong><span>Drone or telescopic imaging, photogrammetry, repeat detail capture and automated comparison of connections, coatings and geometry.</span></div>
@@ -703,7 +673,7 @@
 </div>
 </article>
 <article class="pathway-card reveal">
-<div class="pathway-card__head"><div><span class="pathway-card__index">P06</span><h3>Stations, depots and high-level interiors</h3></div></div>
+<div class="pathway-card__head"><div><span class="pathway-card__index">P06</span><h3>Stations, depots and high-level interiors</h3></div></div><a aria-label="Open the conceptual visual for P06 Stations, depots and high-level interiors at full size" class="pathway-card__visual" href="assets/images/pathway-stations-depots-high-level-interiors.png" rel="noopener" target="_blank"><picture><source sizes="(max-width: 980px) calc(100vw - 40px), 48vw" srcset="assets/images/pathway-stations-depots-high-level-interiors-640.webp 640w, assets/images/pathway-stations-depots-high-level-interiors-960.webp 960w, assets/images/pathway-stations-depots-high-level-interiors-1536.webp 1536w" type="image/webp"/><img alt="Conceptual station, depot and high-level interior pathway showing 360 imaging, controlled high-reach access, geometric mapping, thermography, close inspection and reinstatement." decoding="async" height="1024" loading="lazy" src="assets/images/pathway-stations-depots-high-level-interiors.png" width="1536"/></picture></a>
 <p>Representative conditions include ceiling or wall deterioration, façade and canopy defects, large-area finish failure, water-related indications and difficult-access components.</p>
 <div class="pathway-flow">
 <div><strong>Routine screening</strong><span>360° imaging, telescopic or remote capture, permitted indoor/outdoor drone use, thermography, façade mapping and repeat large-area comparison.</span></div>
@@ -713,7 +683,7 @@
 </div>
 </article>
 <article class="pathway-card reveal">
-<div class="pathway-card__head"><div><span class="pathway-card__index">P07</span><h3>Foundations, soil, erosion and scour</h3></div></div>
+<div class="pathway-card__head"><div><span class="pathway-card__index">P07</span><h3>Foundations, soil, erosion and scour</h3></div></div><a aria-label="Open the conceptual visual for P07 Foundations, soil, erosion and scour at full size" class="pathway-card__visual" href="assets/images/pathway-foundations-soil-erosion-scour.png" rel="noopener" target="_blank"><picture><source sizes="(max-width: 980px) calc(100vw - 40px), 48vw" srcset="assets/images/pathway-foundations-soil-erosion-scour-640.webp 640w, assets/images/pathway-foundations-soil-erosion-scour-960.webp 960w, assets/images/pathway-foundations-soil-erosion-scour-1536.webp 1536w" type="image/webp"/><img alt="Conceptual foundation, soil, erosion and scour pathway showing survey, ground investigation, water-path analysis, stabilization, protection and monitoring." decoding="async" height="1024" loading="lazy" src="assets/images/pathway-foundations-soil-erosion-scour.png" width="1536"/></picture></a>
 <p>Representative conditions include visible erosion, scour, settlement indicators, drainage concentration, exposed foundation interfaces or changes around viaduct supports.</p>
 <div class="pathway-flow">
 <div><strong>Routine screening</strong><span>Drone/photogrammetric survey, repeat ground imagery, geometric comparison, drainage observation and fixed monitoring where justified.</span></div>
@@ -723,24 +693,7 @@
 </div>
 </article>
 </div>
-<p class="proposal-note"><strong>Coupled-mechanism principle:</strong> material, structural, water, ground, thermal, operational and dynamic variables should not be treated as isolated subjects when evidence indicates that their interaction may influence the condition or the reliability of the diagnostic result.</p>
-
-<div class="visual-prompts reveal">
-<div class="visual-prompts__intro">
-<p class="eyebrow eyebrow--dark"><span></span> Suggested support visuals</p>
-<h3>Prompt placeholders for representative asset pathways</h3>
-<p>Each prompt below is intended to create one landscape support visual corresponding to one pathway card, without replacing the text content already on the page.</p>
-</div>
-<div class="prompt-grid">
-<article class="prompt-card"><span class="prompt-card__label">P01 visual</span><h4>Tunnel lining, joints and water ingress</h4><pre>Create a premium landscape engineering support visual for tunnel lining, joints and water ingress in a metro environment. Show a tunnel section with seepage or dampness at a joint, routine geolocated imaging, thermal or moisture comparison, targeted close inspection and a controlled functional pathway suggesting drainage or joint treatment. Keep the scene technical, realistic and restrained. No text, no logos, no dramatic collapse.</pre></article>
-<article class="prompt-card"><span class="prompt-card__label">P02 visual</span><h4>Track bed, plinth and trackside elements</h4><pre>Create a premium landscape engineering support visual for track bed, concrete plinth and trackside elements. Show repeatable rail-compatible screening, localized cracks or detached prior repair, targeted concrete validation and a controlled intervention pathway for reinstatement or fixing restoration. The tone must be technical and operational, not alarmist. No text or logos.</pre></article>
-<article class="prompt-card"><span class="prompt-card__label">P03 visual</span><h4>Viaduct bearing pedestal and support zones</h4><pre>Create a premium landscape engineering support visual showing a viaduct bearing pedestal and support-zone diagnostic pathway. Include drone or terrestrial capture, close review of cracking or bearing-zone distress, measurement or monitoring and a decision pathway related to support movement, corrosion or load-transfer interfaces. Realistic, corporate and disciplined. No text or logos.</pre></article>
-<article class="prompt-card"><span class="prompt-card__label">P04 visual</span><h4>Box girders and viaduct superstructure</h4><pre>Create a premium landscape support visual for box girders and viaduct superstructure inspection. Show elevated concrete segments, remote visual capture, geometry comparison, targeted inspection access and a controlled pathway toward structural review, drainage management or local rehabilitation. Keep the image credible, premium and non-dramatic. No text or logos.</pre></article>
-<article class="prompt-card"><span class="prompt-card__label">P05 visual</span><h4>Structural steel, anchors and station canopies</h4><pre>Create a premium landscape engineering support visual for structural steel, anchors and station canopies. Show steel members, connection details, coatings or corrosion-sensitive areas, repeatable screening and close inspection of anchors, bolts or welds, with a controlled protection or rehabilitation pathway. Use a realistic architecture and engineering style. No text or logos.</pre></article>
-<article class="prompt-card"><span class="prompt-card__label">P06 visual</span><h4>Stations, depots and high-level interiors</h4><pre>Create a premium landscape support visual for stations, depots and high-level interior inspection. Show large wall, ceiling or canopy areas, 360 or high-reach capture, targeted detailed review and a workflow toward repair planning or monitoring of high-level components. Keep the scene clean, premium, operational and realistic. No text or logos.</pre></article>
-<article class="prompt-card"><span class="prompt-card__label">P07 visual</span><h4>Foundations, soil, erosion and scour</h4><pre>Create a premium landscape support visual for foundations, soil, erosion and scour risk around metro civil infrastructure. Show a support, embankment or water-adjacent foundation condition, geotechnical or survey investigation, erosion indicators and a controlled pathway toward drainage, stabilization, scour protection or structural escalation. Realistic engineering visualization, no text and no logos.</pre></article>
-</div>
-</div>
+<p class="conceptual-visual-note">Conceptual illustrations. These pathways show representative investigation and functional intervention logic; final mechanisms, methods and acceptance criteria remain project-specific.</p><p class="proposal-note"><strong>Coupled-mechanism principle:</strong> material, structural, water, ground, thermal, operational and dynamic variables should not be treated as isolated subjects when evidence indicates that their interaction may influence the condition or the reliability of the diagnostic result.</p>
 
 </div>
 </section>
@@ -833,22 +786,7 @@
 </article>
 </div>
 <p class="proposal-note"><strong>Technology-selection boundary:</strong> this is an evaluation architecture, not a purchasing list. Supplier, model, railway reference, integration, ownership/rental strategy, data-hosting route and approval remain project-specific.</p>
-
-<div class="visual-prompts reveal">
-<div class="visual-prompts__intro">
-<p class="eyebrow"><span></span> Suggested support visual</p>
-<h3>Prompt placeholder for technology by operating environment</h3>
-<p>Use this prompt to generate one wide support visual below this section.</p>
-</div>
-<div class="prompt-grid prompt-grid--one">
-<article class="prompt-card">
-<span class="prompt-card__label">TOE-01</span>
-<h4>Technology by operating environment</h4>
-<pre>Create a premium landscape infographic-style engineering visual showing technology by operating environment for metro infrastructure. Organize the image into three coherent zones: track and tunnel assets, viaducts or bearing and foundation zones, and stations or depots. In each zone, depict suitable inspection families such as rail-compatible mobile capture, RGB or 360 imaging, LiDAR or profiling, thermography, drone inspection outdoors only, high-reach capture, targeted NDT and monitoring where justified. Visually communicate that different environments require different platform and evidence combinations. Dark navy, steel and concrete grey palette with restrained cyan accents. No logos, no small readable text and no exaggerated failures.</pre>
-</article>
-</div>
-</div>
-
+<figure class="support-visual support-visual--dark support-visual--integrated reveal"><a aria-label="Open the Technology combinations change with access, geometry, safety constraints and the decision each environment must support. visual at full size" class="support-visual__frame" href="assets/images/technology-by-operating-environment.png" rel="noopener" target="_blank"><picture><source sizes="(max-width: 1100px) calc(100vw - 32px), min(1160px, calc(100vw - 120px))" srcset="assets/images/technology-by-operating-environment-640.webp 640w, assets/images/technology-by-operating-environment-960.webp 960w, assets/images/technology-by-operating-environment-1536.webp 1536w" type="image/webp"/><img alt="Technology-by-operating-environment framework separating track and tunnel inspection, outdoor viaduct and foundation inspection, and station or depot inspection with distinct platforms and decision outputs." decoding="async" height="941" loading="lazy" src="assets/images/technology-by-operating-environment.png" width="1672"/></picture></a><figcaption><span>Technology combinations change with access, geometry, safety constraints and the decision each environment must support.</span><span aria-hidden="true" class="support-visual__expand">View full size ↗</span></figcaption></figure>
 </div>
 </section>
 <section aria-labelledby="inspection-model-title" class="capabilities section" id="inspection-model">
@@ -882,22 +820,7 @@
 <p>Coverage rate, route speed, setup time, operators, possession time, data-processing effort, escalation rate, false-result controls, repeatability and lifecycle cost.</p>
 </article>
 </div>
-
-<div class="visual-prompts reveal">
-<div class="visual-prompts__intro">
-<p class="eyebrow eyebrow--dark"><span></span> Suggested support visual</p>
-<h3>Prompt placeholder for the routine inspection operating model</h3>
-<p>Use this prompt to generate one support visual that complements the three cards above.</p>
-</div>
-<div class="prompt-grid prompt-grid--one">
-<article class="prompt-card">
-<span class="prompt-card__label">RIO-01</span>
-<h4>Routine inspection operating model</h4>
-<pre>Create a premium landscape engineering illustration showing a routine inspection operating model for metro infrastructure. Show three connected stages: automated or reduced-manpower routine screening, targeted touching-distance and specialist inspection, and pilot-based operational value metrics. Include repeatable capture, AI-assisted screening, geolocation and change detection in the first stage; qualified close inspection, NDT and engineering interpretation in the second; and measurable outputs such as coverage, setup time, escalation and repeatability in the third. Use a clean corporate engineering style, dark navy and steel tones with restrained cyan accents, no logos and no small readable text.</pre>
-</article>
-</div>
-</div>
-
+<figure class="support-visual support-visual--light support-visual--integrated reveal"><a aria-label="Open the Routine screening, targeted validation and operational metrics remain connected within one accountable workflow. visual at full size" class="support-visual__frame" href="assets/images/routine-inspection-operating-model.png" rel="noopener" target="_blank"><picture><source sizes="(max-width: 1100px) calc(100vw - 32px), min(1160px, calc(100vw - 120px))" srcset="assets/images/routine-inspection-operating-model-640.webp 640w, assets/images/routine-inspection-operating-model-960.webp 960w, assets/images/routine-inspection-operating-model-1536.webp 1536w" type="image/webp"/><img alt="Three-stage metro routine-inspection operating model linking automated screening, targeted specialist validation and measurable operational value." decoding="async" height="941" loading="lazy" src="assets/images/routine-inspection-operating-model.png" width="1672"/></picture></a><figcaption><span>Routine screening, targeted validation and operational metrics remain connected within one accountable workflow.</span><span aria-hidden="true" class="support-visual__expand">View full size ↗</span></figcaption></figure>
 </div>
 </section>
 <section aria-labelledby="pilot-evidence-title" class="delivery section" id="pilot-evidence">
@@ -988,7 +911,7 @@
 <article class="delivery-step reveal"><span>04</span><h3>Scale, handover and lifecycle integration</h3><p>Establish repeatable procedures, digital defect registers, alert rules, monitoring, operator training, decision rationale, maintenance integration and qualified local delivery.</p></article>
 </div>
 <p class="proposal-note"><strong>Commercial boundary:</strong> the capability framework can be presented now. Detailed benchmarking, equipment selection, system integration, engineering, formulation work, testing, pilots and deployment require an agreed mandate.</p>
-<figure class="support-visual support-visual--light  reveal">
+<figure class="support-visual support-visual--light reveal">
 <a aria-label="Open the a phased path from baseline information through diagnostic scoping, controlled pilot and lifecycle integration visual at full size" class="support-visual__frame" href="assets/images/phased-delivery-roadmap.png" rel="noopener" target="_blank">
 <picture>
 <source sizes="(max-width: 1100px) calc(100vw - 32px), min(1160px, calc(100vw - 120px))" srcset="assets/images/phased-delivery-roadmap-960.webp 960w, assets/images/phased-delivery-roadmap-1672.webp 1672w" type="image/webp"/>
@@ -1061,7 +984,7 @@
 <h2 id="company-title">Integration and accountability for complex infrastructure decisions.</h2>
 <p>AegisCrete is developing one coordinated solution source for evidence-led infrastructure assessment, automated routine screening, diagnostic investigation, functional technology selection, rehabilitation, verification, knowledge transfer and monitoring.</p>
 <p>The model brings together field execution, materials knowledge, specialist inspection, engineering disciplines, laboratories, digital decision support and qualified delivery partners according to the requirements of each asset and project. It does not assume that every capability is performed internally.</p>
-<ul class="expertise-list" aria-label="Coordinated expertise layers">
+<ul aria-label="Coordinated expertise layers" class="expertise-list">
 <li>Field rehabilitation, constructability and controlled execution</li>
 <li>Materials, chemistry, provenance and compatibility</li>
 <li>Qualified engineering, specialist inspection, NDT and laboratories</li>
@@ -1076,22 +999,7 @@
 <div><span>03</span><strong>Qualified specialists where required</strong></div>
 <div><span>04</span><strong>Verification before scale</strong></div>
 </div>
-
-<div class="visual-prompts reveal">
-<div class="visual-prompts__intro">
-<p class="eyebrow"><span></span> Suggested support visual</p>
-<h3>Prompt placeholder for the AegisCrete model</h3>
-<p>Use this prompt to generate one support visual that complements the description of the coordination model.</p>
-</div>
-<div class="prompt-grid prompt-grid--one">
-<article class="prompt-card">
-<span class="prompt-card__label">ACM-01</span>
-<h4>About the AegisCrete model</h4>
-<pre>Create a premium landscape conceptual illustration of the AegisCrete model as an integrated coordination framework for metro infrastructure decisions. Show a central orchestration hub connected to field execution, materials and chemistry, specialist inspection and NDT, engineering disciplines, laboratories, digital decision support, AI-assisted screening, railway safety and access planning, verification, training, handover and lifecycle monitoring. The visual should communicate integration and accountability rather than a single product. Use a refined corporate engineering style, dark navy with concrete grey and cyan highlights, no logos and no small readable text.</pre>
-</article>
-</div>
-</div>
-
+<figure class="support-visual support-visual--dark support-visual--integrated reveal company__model-visual"><a aria-label="Open the AegisCrete coordinates specialist capabilities and evidence around one traceable infrastructure decision pathway. visual at full size" class="support-visual__frame" href="assets/images/aegiscrete-integrated-coordination-model.png" rel="noopener" target="_blank"><picture><source sizes="(max-width: 1100px) calc(100vw - 32px), min(1160px, calc(100vw - 120px))" srcset="assets/images/aegiscrete-integrated-coordination-model-640.webp 640w, assets/images/aegiscrete-integrated-coordination-model-960.webp 960w, assets/images/aegiscrete-integrated-coordination-model-1536.webp 1536w" type="image/webp"/><img alt="Conceptual AegisCrete coordination model connecting field execution, materials, inspection, engineering, laboratories, digital decision support, verification, training and lifecycle monitoring." decoding="async" height="941" loading="lazy" src="assets/images/aegiscrete-integrated-coordination-model.png" width="1672"/></picture></a><figcaption><span>AegisCrete coordinates specialist capabilities and evidence around one traceable infrastructure decision pathway.</span><span aria-hidden="true" class="support-visual__expand">View full size ↗</span></figcaption></figure>
 </div>
 </section>
 <section aria-labelledby="contact-title" class="contact section" id="contact">
