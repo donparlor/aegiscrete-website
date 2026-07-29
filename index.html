@@ -24,7 +24,7 @@
 <link href="assets/brand/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
 <link href="assets/brand/apple-touch-icon.png" rel="apple-touch-icon"/>
 <link href="site.webmanifest" rel="manifest"/>
-<link href="assets/css/styles.css?v=20260728-8" rel="stylesheet"/>
+<link href="assets/css/styles.css?v=20260729-1" rel="stylesheet"/>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -258,6 +258,99 @@
     .expertise-list { grid-template-columns: 1fr; }
   }
 
+
+  /* July 29 2026 content refinement: card spacing + visual prompt placeholders */
+  .capability-card { justify-content: flex-start; }
+  .capability-card h3 { margin: 16px 0 14px; max-width: none; }
+  .capability-card__kicker + h3 { margin-top: 10px; }
+  .capability-card p { margin: 0; }
+  .capability-card ul { margin-top: 18px; }
+
+  .visual-prompts {
+    margin-top: 34px;
+    padding: 24px;
+    border: 1px dashed rgba(7,17,31,.18);
+    background: rgba(7,17,31,.03);
+  }
+  .visual-prompts__intro p {
+    margin: 10px 0 0;
+    color: rgba(7,17,31,.68);
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  .visual-prompts__intro h3 {
+    margin: 10px 0 0;
+    font-size: 24px;
+    line-height: 1.18;
+  }
+  .visual-prompts__intro .eyebrow,
+  .visual-prompts .eyebrow { margin-bottom: 0; }
+  .prompt-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 22px;
+  }
+  .prompt-grid--two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .prompt-grid--one { grid-template-columns: 1fr; }
+  .prompt-card {
+    padding: 18px;
+    border: 1px solid rgba(7,17,31,.12);
+    background: #fff;
+    box-shadow: 0 10px 24px rgba(7,17,31,.04);
+  }
+  .prompt-card__label {
+    display: inline-flex;
+    margin-bottom: 12px;
+    color: var(--cyan-500, #008fb3);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+  }
+  .prompt-card h4 {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.25;
+  }
+  .prompt-card__note {
+    margin: 10px 0 0;
+    color: rgba(7,17,31,.65);
+    font-size: 13px;
+    line-height: 1.6;
+  }
+  .prompt-card pre {
+    margin: 14px 0 0;
+    white-space: pre-wrap;
+    word-break: break-word;
+    font: 12px/1.62 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    color: rgba(7,17,31,.82);
+  }
+  .section--ink .visual-prompts,
+  .company.section--ink .visual-prompts {
+    border-color: rgba(115,215,237,.22);
+    background: rgba(255,255,255,.045);
+  }
+  .section--ink .visual-prompts__intro p,
+  .company.section--ink .visual-prompts__intro p,
+  .section--ink .prompt-card__note,
+  .company.section--ink .prompt-card__note { color: rgba(255,255,255,.72); }
+  .section--ink .prompt-card,
+  .company.section--ink .prompt-card {
+    border-color: rgba(255,255,255,.12);
+    background: rgba(255,255,255,.04);
+    box-shadow: none;
+  }
+  .section--ink .prompt-card pre,
+  .company.section--ink .prompt-card pre { color: rgba(255,255,255,.84); }
+  @media (max-width: 1100px) {
+    .prompt-grid,
+    .prompt-grid--two { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 760px) {
+    .visual-prompts { padding: 20px; }
+  }
+
 </style></head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -316,7 +409,7 @@
 <div aria-hidden="true" class="section-number">01</div>
 <div class="statement__content reveal">
 <p class="eyebrow eyebrow--dark"><span></span> Our position</p>
-<h2>An integrated point of responsibility and one coordinated solution source—not a universal product, a single sensor or an unsupported promise.</h2>
+<h2>An integrated point of responsibility and one coordinated solution source, not a universal product, a single sensor or an unsupported promise.</h2>
 <p>AegisCrete connects project context, asset, material and stewardship intelligence, specialist disciplines, digital data, controlled field delivery, verification and knowledge transfer into one traceable decision pathway. Different assets may require different platforms, methods, partners and solution categories.</p>
 </div>
 <div class="statement__aside reveal reveal--delay">
@@ -474,6 +567,35 @@
 <p>Geolocated defect registers, repeat-image comparison, change detection, acceptance records, predictive-maintenance support, operating procedures, training, handover and maintenance integration.</p>
 </article>
 </div>
+
+<div class="visual-prompts reveal">
+<div class="visual-prompts__intro">
+<p class="eyebrow eyebrow--dark"><span></span> Suggested support visuals</p>
+<h3>Prompt placeholders for coordinated capability layers</h3>
+<p>Generate the visuals in a separate image-generation conversation, then replace these prompt cards with the final image cards or thumbnails.</p>
+</div>
+<div class="prompt-grid">
+<article class="prompt-card">
+<span class="prompt-card__label">CCL-01</span>
+<h4>Asset, material and stewardship intelligence</h4>
+<p class="prompt-card__note">Suggested small landscape support visual</p>
+<pre>Create a premium landscape engineering visual tile showing metro infrastructure asset, material and stewardship intelligence. Include layered as-built records, a tunnel or station structural fragment, material samples, waterproofing or drainage cues, repair-history references and a disciplined evidence dashboard. Style: high-end corporate engineering visualization, realistic-digital hybrid, clean and restrained, concrete grey, steel and dark navy tones with subtle cyan accents. No logos, no readable small text and no dramatic failure scene.</pre>
+</article>
+<article class="prompt-card">
+<span class="prompt-card__label">CCL-02</span>
+<h4>Automated routine inspection architecture</h4>
+<p class="prompt-card__note">Suggested small landscape support visual</p>
+<pre>Create a premium landscape visual tile showing automated routine inspection architecture for metro assets. Show a coordinated family of platforms such as a rail-compatible tunnel robot, an outdoor drone near a viaduct, a terrestrial LiDAR tripod and a telescopic or high-reach inspection unit, all connected through repeatable geolocated data capture. Style: realistic architectural-engineering visualization with dark navy and steel tones, subtle cyan overlays, clean lighting, no logos and no readable text.</pre>
+</article>
+<article class="prompt-card">
+<span class="prompt-card__label">CCL-03</span>
+<h4>Rehabilitation, protection and controlled delivery</h4>
+<p class="prompt-card__note">Suggested small landscape support visual</p>
+<pre>Create a premium landscape visual tile showing controlled rehabilitation, protection and delivery for metro infrastructure. Illustrate carefully planned repair execution, joint or drainage management, localized reinstatement, corrosion control, protective treatment, verification steps and lifecycle monitoring handover. Show controlled access, professional execution and measurable verification rather than an emergency scene. Use a refined corporate engineering style, concrete grey and dark navy with restrained cyan accents, no logos and no text.</pre>
+</article>
+</div>
+</div>
+
 </div>
 </section>
 <section aria-labelledby="assets-title" class="assets section" id="infrastructure">
@@ -602,6 +724,24 @@
 </article>
 </div>
 <p class="proposal-note"><strong>Coupled-mechanism principle:</strong> material, structural, water, ground, thermal, operational and dynamic variables should not be treated as isolated subjects when evidence indicates that their interaction may influence the condition or the reliability of the diagnostic result.</p>
+
+<div class="visual-prompts reveal">
+<div class="visual-prompts__intro">
+<p class="eyebrow eyebrow--dark"><span></span> Suggested support visuals</p>
+<h3>Prompt placeholders for representative asset pathways</h3>
+<p>Each prompt below is intended to create one landscape support visual corresponding to one pathway card, without replacing the text content already on the page.</p>
+</div>
+<div class="prompt-grid">
+<article class="prompt-card"><span class="prompt-card__label">P01 visual</span><h4>Tunnel lining, joints and water ingress</h4><pre>Create a premium landscape engineering support visual for tunnel lining, joints and water ingress in a metro environment. Show a tunnel section with seepage or dampness at a joint, routine geolocated imaging, thermal or moisture comparison, targeted close inspection and a controlled functional pathway suggesting drainage or joint treatment. Keep the scene technical, realistic and restrained. No text, no logos, no dramatic collapse.</pre></article>
+<article class="prompt-card"><span class="prompt-card__label">P02 visual</span><h4>Track bed, plinth and trackside elements</h4><pre>Create a premium landscape engineering support visual for track bed, concrete plinth and trackside elements. Show repeatable rail-compatible screening, localized cracks or detached prior repair, targeted concrete validation and a controlled intervention pathway for reinstatement or fixing restoration. The tone must be technical and operational, not alarmist. No text or logos.</pre></article>
+<article class="prompt-card"><span class="prompt-card__label">P03 visual</span><h4>Viaduct bearing pedestal and support zones</h4><pre>Create a premium landscape engineering support visual showing a viaduct bearing pedestal and support-zone diagnostic pathway. Include drone or terrestrial capture, close review of cracking or bearing-zone distress, measurement or monitoring and a decision pathway related to support movement, corrosion or load-transfer interfaces. Realistic, corporate and disciplined. No text or logos.</pre></article>
+<article class="prompt-card"><span class="prompt-card__label">P04 visual</span><h4>Box girders and viaduct superstructure</h4><pre>Create a premium landscape support visual for box girders and viaduct superstructure inspection. Show elevated concrete segments, remote visual capture, geometry comparison, targeted inspection access and a controlled pathway toward structural review, drainage management or local rehabilitation. Keep the image credible, premium and non-dramatic. No text or logos.</pre></article>
+<article class="prompt-card"><span class="prompt-card__label">P05 visual</span><h4>Structural steel, anchors and station canopies</h4><pre>Create a premium landscape engineering support visual for structural steel, anchors and station canopies. Show steel members, connection details, coatings or corrosion-sensitive areas, repeatable screening and close inspection of anchors, bolts or welds, with a controlled protection or rehabilitation pathway. Use a realistic architecture and engineering style. No text or logos.</pre></article>
+<article class="prompt-card"><span class="prompt-card__label">P06 visual</span><h4>Stations, depots and high-level interiors</h4><pre>Create a premium landscape support visual for stations, depots and high-level interior inspection. Show large wall, ceiling or canopy areas, 360 or high-reach capture, targeted detailed review and a workflow toward repair planning or monitoring of high-level components. Keep the scene clean, premium, operational and realistic. No text or logos.</pre></article>
+<article class="prompt-card"><span class="prompt-card__label">P07 visual</span><h4>Foundations, soil, erosion and scour</h4><pre>Create a premium landscape support visual for foundations, soil, erosion and scour risk around metro civil infrastructure. Show a support, embankment or water-adjacent foundation condition, geotechnical or survey investigation, erosion indicators and a controlled pathway toward drainage, stabilization, scour protection or structural escalation. Realistic engineering visualization, no text and no logos.</pre></article>
+</div>
+</div>
+
 </div>
 </section>
 <section aria-labelledby="technology-title" class="technology section section--blue" id="technology">
@@ -693,6 +833,22 @@
 </article>
 </div>
 <p class="proposal-note"><strong>Technology-selection boundary:</strong> this is an evaluation architecture, not a purchasing list. Supplier, model, railway reference, integration, ownership/rental strategy, data-hosting route and approval remain project-specific.</p>
+
+<div class="visual-prompts reveal">
+<div class="visual-prompts__intro">
+<p class="eyebrow"><span></span> Suggested support visual</p>
+<h3>Prompt placeholder for technology by operating environment</h3>
+<p>Use this prompt to generate one wide support visual below this section.</p>
+</div>
+<div class="prompt-grid prompt-grid--one">
+<article class="prompt-card">
+<span class="prompt-card__label">TOE-01</span>
+<h4>Technology by operating environment</h4>
+<pre>Create a premium landscape infographic-style engineering visual showing technology by operating environment for metro infrastructure. Organize the image into three coherent zones: track and tunnel assets, viaducts or bearing and foundation zones, and stations or depots. In each zone, depict suitable inspection families such as rail-compatible mobile capture, RGB or 360 imaging, LiDAR or profiling, thermography, drone inspection outdoors only, high-reach capture, targeted NDT and monitoring where justified. Visually communicate that different environments require different platform and evidence combinations. Dark navy, steel and concrete grey palette with restrained cyan accents. No logos, no small readable text and no exaggerated failures.</pre>
+</article>
+</div>
+</div>
+
 </div>
 </section>
 <section aria-labelledby="inspection-model-title" class="capabilities section" id="inspection-model">
@@ -726,6 +882,22 @@
 <p>Coverage rate, route speed, setup time, operators, possession time, data-processing effort, escalation rate, false-result controls, repeatability and lifecycle cost.</p>
 </article>
 </div>
+
+<div class="visual-prompts reveal">
+<div class="visual-prompts__intro">
+<p class="eyebrow eyebrow--dark"><span></span> Suggested support visual</p>
+<h3>Prompt placeholder for the routine inspection operating model</h3>
+<p>Use this prompt to generate one support visual that complements the three cards above.</p>
+</div>
+<div class="prompt-grid prompt-grid--one">
+<article class="prompt-card">
+<span class="prompt-card__label">RIO-01</span>
+<h4>Routine inspection operating model</h4>
+<pre>Create a premium landscape engineering illustration showing a routine inspection operating model for metro infrastructure. Show three connected stages: automated or reduced-manpower routine screening, targeted touching-distance and specialist inspection, and pilot-based operational value metrics. Include repeatable capture, AI-assisted screening, geolocation and change detection in the first stage; qualified close inspection, NDT and engineering interpretation in the second; and measurable outputs such as coverage, setup time, escalation and repeatability in the third. Use a clean corporate engineering style, dark navy and steel tones with restrained cyan accents, no logos and no small readable text.</pre>
+</article>
+</div>
+</div>
+
 </div>
 </section>
 <section aria-labelledby="pilot-evidence-title" class="delivery section" id="pilot-evidence">
@@ -733,7 +905,7 @@
 <div class="section-heading section-heading--split reveal">
 <div>
 <p class="eyebrow eyebrow--dark"><span></span> What the pilot must demonstrate</p>
-<h2 id="pilot-evidence-title">Operational value must be measured—not assumed.</h2>
+<h2 id="pilot-evidence-title">Operational value must be measured, not assumed.</h2>
 </div>
 <p>A representative pilot should test the complete operating chain, from access and repeatable capture through engineering review, touching-distance validation, reporting and lifecycle use.</p>
 </div>
@@ -904,6 +1076,22 @@
 <div><span>03</span><strong>Qualified specialists where required</strong></div>
 <div><span>04</span><strong>Verification before scale</strong></div>
 </div>
+
+<div class="visual-prompts reveal">
+<div class="visual-prompts__intro">
+<p class="eyebrow"><span></span> Suggested support visual</p>
+<h3>Prompt placeholder for the AegisCrete model</h3>
+<p>Use this prompt to generate one support visual that complements the description of the coordination model.</p>
+</div>
+<div class="prompt-grid prompt-grid--one">
+<article class="prompt-card">
+<span class="prompt-card__label">ACM-01</span>
+<h4>About the AegisCrete model</h4>
+<pre>Create a premium landscape conceptual illustration of the AegisCrete model as an integrated coordination framework for metro infrastructure decisions. Show a central orchestration hub connected to field execution, materials and chemistry, specialist inspection and NDT, engineering disciplines, laboratories, digital decision support, AI-assisted screening, railway safety and access planning, verification, training, handover and lifecycle monitoring. The visual should communicate integration and accountability rather than a single product. Use a refined corporate engineering style, dark navy with concrete grey and cyan highlights, no logos and no small readable text.</pre>
+</article>
+</div>
+</div>
+
 </div>
 </section>
 <section aria-labelledby="contact-title" class="contact section" id="contact">
