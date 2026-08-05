@@ -376,6 +376,47 @@
   .field-case h3 {
     margin: 0 0 16px;
   }
+  .field-case__gallery {
+    display: grid;
+    gap: 10px;
+    margin: 0 0 18px;
+  }
+  .field-case__gallery--3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .field-case__gallery--4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .field-case__photo {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border: 1px solid rgba(7,17,31,.12);
+    background: rgba(7,17,31,.04);
+    aspect-ratio: 4 / 3;
+    box-shadow: 0 8px 22px rgba(7,17,31,.08);
+  }
+  .field-case__photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .field-case__photo-badge {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 8px;
+    background: rgba(7,17,31,.84);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    line-height: 1.15;
+  }
   .field-case__sequence {
     display: flex;
     flex-wrap: wrap;
@@ -541,6 +582,11 @@
     .repair-card,
     .governance-card {
       padding: 20px;
+    }
+    .field-case__gallery,
+    .field-case__gallery--3,
+    .field-case__gallery--4 {
+      grid-template-columns: 1fr;
     }
     .repair-chain {
       grid-template-columns: 1fr;
@@ -780,6 +826,11 @@
 <article class="field-case reveal">
 <span class="field-case__label">Representative non-rail field example</span>
 <h3>Localized concrete and reinforcement restoration</h3>
+<div class="field-case__gallery field-case__gallery--3">
+<a aria-label="Open case 1 image 1: distressed concrete condition" class="field-case__photo" href="assets/images/field-experience/case-1-01-distress.png" rel="noopener" target="_blank"><img alt="Case 1 — distressed concrete condition before repair." decoding="async" loading="lazy" src="assets/images/field-experience/case-1-01-distress.png"/><span class="field-case__photo-badge">01 Distress</span></a>
+<a aria-label="Open case 1 image 2: prepared repair area" class="field-case__photo" href="assets/images/field-experience/case-1-02-prepared.png" rel="noopener" target="_blank"><img alt="Case 1 — repair area after preparation." decoding="async" loading="lazy" src="assets/images/field-experience/case-1-02-prepared.png"/><span class="field-case__photo-badge">02 Prepared</span></a>
+<a aria-label="Open case 1 image 3: reinstated repair area" class="field-case__photo" href="assets/images/field-experience/case-1-03-reinstated.png" rel="noopener" target="_blank"><img alt="Case 1 — localized reinstatement after repair." decoding="async" loading="lazy" src="assets/images/field-experience/case-1-03-reinstated.png"/><span class="field-case__photo-badge">03 Reinstated</span></a>
+</div>
 <div aria-label="Representative repair sequence" class="field-case__sequence"><span>01 Distress</span><span>02 Prepared</span><span>03 Reinstated</span></div>
 <div class="field-case__detail"><strong>Condition</strong><p>Localized concrete deterioration with evidence of prior repair and reinforcement-area distress.</p></div>
 <div class="field-case__detail"><strong>Field role</strong><p>Condition review, removal of unsound material, mechanical preparation, reinforcement-area treatment and localized reinstatement.</p></div>
@@ -788,6 +839,12 @@
 <article class="field-case reveal">
 <span class="field-case__label">Representative non-rail field example</span>
 <h3>Heavy-traffic industrial floor restoration with documented follow-up</h3>
+<div class="field-case__gallery field-case__gallery--4">
+<a aria-label="Open case 2 image 1: distressed industrial floor condition" class="field-case__photo" href="assets/images/field-experience/case-2-01-distress.png" rel="noopener" target="_blank"><img alt="Case 2 — distressed heavy-traffic industrial floor condition before repair." decoding="async" loading="lazy" src="assets/images/field-experience/case-2-01-distress.png"/><span class="field-case__photo-badge">01 Distress</span></a>
+<a aria-label="Open case 2 image 2: prepared industrial floor repair area" class="field-case__photo" href="assets/images/field-experience/case-2-02-prepared.png" rel="noopener" target="_blank"><img alt="Case 2 — heavy-traffic floor repair area after preparation." decoding="async" loading="lazy" src="assets/images/field-experience/case-2-02-prepared.png"/><span class="field-case__photo-badge">02 Prepared</span></a>
+<a aria-label="Open case 2 image 3: reinstated industrial floor repair area" class="field-case__photo" href="assets/images/field-experience/case-2-03-reinstated.png" rel="noopener" target="_blank"><img alt="Case 2 — heavy-traffic floor after reinstatement." decoding="async" loading="lazy" src="assets/images/field-experience/case-2-03-reinstated.png"/><span class="field-case__photo-badge">03 Reinstated</span></a>
+<a aria-label="Open case 2 image 4: follow-up after continued service" class="field-case__photo" href="assets/images/field-experience/case-2-04-follow-up.png" rel="noopener" target="_blank"><img alt="Case 2 — follow-up condition after continued service." decoding="async" loading="lazy" src="assets/images/field-experience/case-2-04-follow-up.png"/><span class="field-case__photo-badge">04 Follow-up</span></a>
+</div>
 <div aria-label="Representative repair sequence" class="field-case__sequence"><span>01 Distress</span><span>02 Prepared</span><span>03 Reinstated</span><span>04 Follow-up</span></div>
 <div class="field-case__detail"><strong>Condition</strong><p>Localized concrete deterioration in a surface exposed to repeated heavy-equipment traffic.</p></div>
 <div class="field-case__detail"><strong>Field role</strong><p>Inspection, mechanical preparation, localized reinstatement and return-to-service coordination.</p></div>
